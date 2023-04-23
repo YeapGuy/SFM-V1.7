@@ -51,7 +51,7 @@ public:
   void enable();
   void disable();
   void setPinInterrupt(void (*pinInt)(void));
-  #if defined(ESP32)
+  #if defined(ESP32) || defined(ESP8266)
   void IRAM_ATTR pinInterrupt();
   #else
   void pinInterrupt();
